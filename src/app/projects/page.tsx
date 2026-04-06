@@ -1,4 +1,27 @@
+import ProjectCard from "../../components/ProjectCard"
+
+// Fundamentals learned Arrays, Mapping, keys, Rendering lists
 export default function Projects(){
+
+    const Projects=[
+        {
+            id:1,
+            title: "AI Resume Analyzer",
+            status: "In Progress"
+        },
+        {
+            id:2,
+            title: "SDG App-Learnin gand Quizzes",
+            status: "Completed"
+        },
+        {
+            id:3,
+            title: "AI Powered Healtcare app",
+            status: "Completed"
+        },
+        
+    ]
+
     return(
         <div className="p-10">
             <h1 className="text-3xl font-bold">
@@ -8,11 +31,30 @@ export default function Projects(){
             <p className="text-2xl">
                 Projects are displayed below:
             </p>
-            <ul className="mt-5">
-                <li>Portfolio website</li>
-                <li>Dashboard UI</li>
-                <li>Next.js Learning app</li>
-            </ul>
+            <div className="mt-6">
+                {Projects.map(project=>(
+                    <div 
+                    key={project.id}
+                    className=""
+                    >
+                         <ProjectCard 
+            title={project.title}
+            status={project.status}
+            />
+
+                        {/* Data that we are using for card item or at some other place but we want to create a separate card component for cards section  */}
+                {/* <h2 className="font-bold">
+                    {project.title}                    
+                </h2> 
+                <p>
+                    {project.status}
+                </p> */}
+                </div>       
+
+                ))}
+            </div>
+
+            
         </div>
     )
 }

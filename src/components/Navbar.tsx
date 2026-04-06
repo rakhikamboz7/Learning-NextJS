@@ -4,16 +4,13 @@ export default function Navbar(){
     return (
         <div className="">
             <Link href="/">
-            Home          
-            </Link>
-            <Link href="/about">
-            About        
+            Dashboard         
             </Link>
             <Link href="/projects">
             Projects          
             </Link>
-            <Link href="/contacts">
-            Contacts        
+            <Link href="/add-projects">
+           Add Projects   
             </Link>
         </div>
     )
