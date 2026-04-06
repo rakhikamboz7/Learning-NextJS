@@ -1,9 +1,9 @@
 import ProjectCard from "../../components/ProjectCard"
-
+import { Project } from "@/types/Project"
 // Fundamentals learned Arrays, Mapping, keys, Rendering lists
 export default function Projects(){
 
-    const Projects=[
+    const Projects:Project[]=[
         {
             id:1,
             title: "AI Resume Analyzer",
